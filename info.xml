@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<extension key="net.ourpowerbase.spouse" type="module">
+  <file>spouse</file>
+  <name>Spouse Settings</name>
+  <description>Provides tokens and functionality to better handle spouse relationship types</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>Jamie McClelland</author>
+    <email>jamie@progressivetech.org</email>
+  </maintainer>
+  <urls>
+    <url desc="Main Extension Page">https://github.com/progressivetech/net.ourpowerbase.spouse</url>
+    <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
+  </urls>
+  <releaseDate>2019-04-16</releaseDate>
+  <version>1.0</version>
+  <develStage>alpha</develStage>
+  <compatibility>
+    <ver>5.0</ver>
+  </compatibility>
+  <civix>
+    <namespace>CRM/Spouse</namespace>
+  </civix>
+</extension>

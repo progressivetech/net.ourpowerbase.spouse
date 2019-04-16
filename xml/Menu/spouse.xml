@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/admin/spouse</path>
+    <page_callback>CRM_Spouse_Form_Spouse</page_callback>
+    <title>Spouse</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>
