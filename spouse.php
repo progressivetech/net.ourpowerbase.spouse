@@ -201,7 +201,7 @@ function spouse_civicrm_navigationMenu(&$menu) {
 
 
 function spouse_civicrm_tokens(&$tokens) {
-  $id = variable_get('opb_partner_relationship_id', opb_get_default_partner_relationship_id());
+  $id = spouse_get_partner_relationship_type_id();
   // Don't offer partner token if the relationship has not been specified.
   if($id) {
     $tokens['partner'] = array(
