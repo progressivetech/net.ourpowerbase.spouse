@@ -1,44 +1,19 @@
 # net.ourpowerbase.spouse
 
-![Screenshot](/images/screenshot.png)
+The Spouse extension provides several tokens that allow you to address both a
+contact and their partner or spouse together when writing to the primary
+contact. The tokens provided are:
 
-(*FIXME: In one or two paragraphs, describe what the extension does and why one would download it. *)
+ * Partner/Spouse Full Name
+ * Partner/Spouse First Name
+ * Partner/Spouse Last Name
+ * Partner/Spouse Address
+ * Partner/Spouse City
+ * Partner/Spouse State
+ * Partner/Spouse Zipcode
+ * Contact and Partner/Spouse first name
+ * Contact and Partner/Spouse full name
 
-The extension is licensed under [AGPL-3.0](LICENSE.txt).
-
-## Requirements
-
-* PHP v5.6+
-* CiviCRM (*FIXME: Version number*)
-
-## Installation (Web UI)
-
-This extension has not yet been published for installation via the web UI.
-
-## Installation (CLI, Zip)
-
-Sysadmins and developers may download the `.zip` file for this extension and
-install it with the command-line tool [cv](https://github.com/civicrm/cv).
-
-```bash
-cd <extension-dir>
-cv dl net.ourpowerbase.spouse@https://github.com/FIXME/net.ourpowerbase.spouse/archive/master.zip
-```
-
-## Installation (CLI, Git)
-
-Sysadmins and developers may clone the [Git](https://en.wikipedia.org/wiki/Git) repo for this extension and
-install it with the command-line tool [cv](https://github.com/civicrm/cv).
-
-```bash
-git clone https://github.com/FIXME/net.ourpowerbase.spouse.git
-cv en spouse
-```
-
-## Usage
-
-(* FIXME: Where would a new user navigate to get started? What changes would they see? *)
-
-## Known Issues
-
-(* FIXME *)
+In addition, the spouse extension will try to disable the partner relationship
+if it is not being used to avoid confusion when you have both a spouse and a
+partner relationship.
