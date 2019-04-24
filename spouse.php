@@ -57,14 +57,13 @@ function spouse_civicrm_enable() {
   _spouse_civix_civicrm_enable();
 
   // CiviCRM ships with both a partner and a spouse relationship type. This
-  // is confusing. When enabled, we will try to disable the partner onee,
+  // is confusing. When enabled, we will try to disable the partner one,
   // but only if we can get away with it (i.e. if it is not in use).
   try {
     $partner_relationship = civicrm_api3('RelationshipType', 'getsingle', [
       'name_a_b' => "Partner is",
       'is_active' => 1,
     ]);
-
     $partner_relationship_type_id = $partner_relationship['id'];
 
     // Make sure this is not the default value.
@@ -87,6 +86,18 @@ function spouse_civicrm_enable() {
     // Hooray, we can disable.
     $partner_relationship['is_active'] = 0;
     civicrm_api3('RelationshipType', 'create', $partner_relationship);
+    $params = [
+      'label_a_b' => "Spouse is",
+      'label_b_a' => "Spouse of",
+      'is_active' => 1,
+    ];
+
+    // And now rename the spouse one to have partner in it.
+    $spouse_relationship = civicrm_api3('RelationshipType', 'getsingle', $params );
+
+    $spouse_relationship['label_a_b'] = 'Spouse/Partner is';
+    $spouse_relationship['label_b_a'] = 'Spouse/Partner of';
+    civicrm_api3('RelationshipType', 'create', $spouse_relationship);
   }
   catch (CiviCRM_API3_Exception $e) {
     // We get an error if it doesn't exist. Oh well, we tried.
